@@ -1,0 +1,21 @@
+<navbar-component></navbar-component>
+<app-side-nav (notify)='onNotifyFilter($event)'></app-side-nav>
+<app-rightscreen (notify)='onNotifyRightWindow($event)'></app-rightscreen>
+<login-component></login-component>
+
+<div id="main" class="main-content-panel">
+  <div class="row">
+    <div class="col-sm-1">
+      <button class="btn button-no-borders" style="background-color: #a7d2fc; color: aliceblue;  " (click)="showHideSideClicked()">
+        <span id="show-hide-side-button" class="fa fa-chevron-right"> </span>
+      </button>
+    </div>
+    <div class="col-sm-11" style="margin-left: -30px;">
+      <div class="row-content-header">{{title}}</div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <app-boardlist (notify)='onNotifyBoardList($event)'></app-boardlist>
+  </div>
+<div>
